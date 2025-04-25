@@ -4,17 +4,13 @@
   "download_videos_by_channel_id_metadata": true,
   "download_videos_by_channel_id_orig_thumbnails": true,
   "download_videos_by_channel_id_1152p_thumbnails": true,
-
   "download_videos_by_video_id_metadata": true,
   "download_videos_by_video_id_orig_thumbnails": true,
   "download_videos_by_video_id_1152p_thumbnails": true,
-
   "download_clips_by_channel_id_metadata": true,
   "download_clips_by_channel_id_thumbnails": true,
-
   "download_clips_by_clip_id_metadata": true,
   "download_clips_by_clip_id_thumbnails": true,
-
   "use_get_twitch_video_thumbnail": true,
   "notes": [
     "1152p thumbnails are thumbnails which sizes are 2048x1152, which is the highest 16:9 resolution supported by Twitch thumbnails, and highest resolution is 2048x2048",
