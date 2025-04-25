@@ -1,0 +1,48 @@
+{
+  "webserver_port": 8080,
+  "overwrite_files": false,
+  "download_videos_by_channel_id_metadata": true,
+  "download_videos_by_channel_id_orig_thumbnails": true,
+  "download_videos_by_channel_id_1152p_thumbnails": true,
+
+  "download_videos_by_video_id_metadata": true,
+  "download_videos_by_video_id_orig_thumbnails": true,
+  "download_videos_by_video_id_1152p_thumbnails": true,
+
+  "download_clips_by_channel_id_metadata": true,
+  "download_clips_by_channel_id_thumbnails": true,
+
+  "download_clips_by_clip_id_metadata": true,
+  "download_clips_by_clip_id_thumbnails": true,
+
+  "use_get_twitch_video_thumbnail": true,
+  "notes": [
+    "1152p thumbnails are thumbnails which sizes are 2048x1152, which is the highest 16:9 resolution supported by Twitch thumbnails, and highest resolution is 2048x2048",
+    "If overwrite_files is set to true, files that already exist will be overwritten, but the data might not always be the same as before, use with caution",
+    "If use_get_twitch_video_thumbnail is set to false, thumbnails will never be downloaded"
+  ],
+  "videos": {
+    "channel_ids": [
+      "channel_id_1",
+      "channel_id_2",
+      "channel_id_3"
+    ],
+    "video_ids": [
+      "video_id_1",
+      "video_id_2",
+      "video_id_3"
+    ]
+  },
+  "clips": {
+    "channel_ids": [
+      "channel_id_1",
+      "channel_id_2",
+      "channel_id_3"
+    ],
+    "clip_ids": [
+      "clip_id_1",
+      "clip_id_2",
+      "clip_id_3"
+    ]
+  }
+}
