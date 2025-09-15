@@ -880,14 +880,20 @@ function getTwitchClipsByBroadcasterId(broadcasterId, globalConfigObject, twitch
               let thumbnailUrlOrig = metadataToWriteToJsonFile.thumbnail_url;
               thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\%\{width\})+/ig, "0");
               thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\%\{height\})+/ig, "0");
-              thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\d+x+\d+)+/ig, "0x0");
+              //thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\d+x+\d+)+/ig, "0x0");
+              thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\d+x+\d+)+\.+((j+p+g+)+|(p+n+g+)+|(w+e+b+p+)+)+/ig, "0x0.jpg");
+              //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+              //console.log(thumbnailUrlOrig);
               if (globalConfigObject.download_clips_by_channel_id_thumbnails == true) {
                 getTwitchVideoThumbnail(thumbnailUrlOrig, "clips", "orig", globalConfigObject, metadataToWriteToJsonFile, twitchCredentialsObject);
               }
               let thumbnailUrl1152p = metadataToWriteToJsonFile.thumbnail_url;
               thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\%\{width\})+/ig, "2048");
               thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\%\{height\})+/ig, "1152");
-              thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\d+x+\d+)+/ig, "2048x1152");
+              //thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\d+x+\d+)+/ig, "2048x1152");
+              thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\d+x+\d+)+\.+((j+p+g+)+|(p+n+g+)+|(w+e+b+p+)+)+/ig, "2048x1152.jpg");
+              //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+              //console.log(thumbnailUrl1152p);
               if (globalConfigObject.download_clips_by_channel_id_thumbnails == true) {
                 getTwitchVideoThumbnail(thumbnailUrl1152p, "clips", "1152p", globalConfigObject, metadataToWriteToJsonFile, twitchCredentialsObject); // NOTE: Resolutions other than 0x0 (orig) get extra compressed, extra crunchy, extra jpeg-ed, extra deepfried, so it isn't really recommended to download thumbnails that are not 0x0 (orig)
               }
@@ -1118,14 +1124,20 @@ function getTwitchClipsByClipId(clipIds, globalConfigObject, twitchCredentialsOb
               let thumbnailUrlOrig = metadataToWriteToJsonFile.thumbnail_url;
               thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\%\{width\})+/ig, "0");
               thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\%\{height\})+/ig, "0");
-              thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\d+x+\d+)+/ig, "0x0");
+              //thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\d+x+\d+)+/ig, "0x0");
+              thumbnailUrlOrig = thumbnailUrlOrig.replace(/(\d+x+\d+)+\.+((j+p+g+)+|(p+n+g+)+|(w+e+b+p+)+)+/ig, "0x0.jpg");
+              //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+              //console.log(thumbnailUrlOrig);
               if (globalConfigObject.download_clips_by_clip_id_thumbnails == true) {
                 getTwitchVideoThumbnail(thumbnailUrlOrig, "clips", "orig", globalConfigObject, metadataToWriteToJsonFile, twitchCredentialsObject);
               }
               let thumbnailUrl1152p = metadataToWriteToJsonFile.thumbnail_url;
               thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\%\{width\})+/ig, "2048");
               thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\%\{height\})+/ig, "1152");
-              thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\d+x+\d+)+/ig, "2048x1152");
+              //thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\d+x+\d+)+/ig, "2048x1152");
+              thumbnailUrl1152p = thumbnailUrl1152p.replace(/(\d+x+\d+)+\.+((j+p+g+)+|(p+n+g+)+|(w+e+b+p+)+)+/ig, "2048x1152.jpg");
+              //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+              //console.log(thumbnailUrl1152p);
               if (globalConfigObject.download_clips_by_clip_id_thumbnails == true) {
                 getTwitchVideoThumbnail(thumbnailUrl1152p, "clips", "1152p", globalConfigObject, metadataToWriteToJsonFile, twitchCredentialsObject); // NOTE: Resolutions other than 0x0 (orig) get extra compressed, extra crunchy, extra jpeg-ed, extra deepfried, so it isn't really recommended to download thumbnails that are not 0x0 (orig)
               }
